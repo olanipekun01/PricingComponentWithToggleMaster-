@@ -1,0 +1,262 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0px auto;
+  padding: 5px;
+  background-color: hsl(240, 78%, 98%);
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-position: top right, bottom left;
+   background-repeat: no-repeat;
+  color: hsl(233, 13%, 49%);
+  text-align: center;
+}
+
+/* Mobile first  */
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* Toggle button */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0px;
+  width: 0px;
+  height: 0px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:hsl(237, 63%, 64%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(236, 72%, 79%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Card section */
+.flex-container {
+  margin-top: 50px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.column2 .flex-wrapper {
+   background-image: linear-gradient(
+       to right,
+    hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+ 
+  color: white;
+}
+
+.column2 .line {
+  border: 1px solid hsl(234, 14%, 74%);
+}
+
+.column2 .annualy {
+  color: #ffffff;
+}
+
+.column2 .monthly {
+  color: #ffffff;
+}
+.column3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.flex-wrapper {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.line {
+  border: 0.5px solid hsl(234, 14%, 74%);
+  margin: 10px 0px 10px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.annualy {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.monthly {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
+}
+/* For the togglee button */
+/* First box */
+.show-monthly .column1 .monthly{
+  display: block;
+}
+
+.show-monthly .column1 .annualy{
+  display: none;
+}
+/* Second box */
+
+.show-monthly .column2 .monthly{
+  display: block;
+}
+
+.show-monthly .column2 .annualy{
+  display: none;
+}
+
+/* THird box */
+.show-monthly .column3 .monthly{
+  display: block;
+}
+
+
+.show-monthly .column3 .annualy{
+  display: none;
+}
+p {
+  font-size: 18px;
+  margin: 20px 0px 20px 0px;
+}
+
+.button {
+  background-image: linear-gradient(
+       to right,
+    hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 20px;
+
+  padding: 20px 70px 20px 70px;
+  margin: 10px 0px 10px 0px;
+  border: none;
+  border: 1px solid hsl(237, 63%, 64%);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 2s ease-in;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+#btn {
+  background: none;
+  color: hsl(237, 63%, 64%);;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.button-details {
+  position: relative;
+  top: 25px;
+}
+
+.monthly {
+  display: none;
+}
+
+/* Responsive for desktop and tablets */
+
+@media (min-width:800px){
+ .row{
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0px 20px 0px 50px;
+ } 
+ .column1 {
+   flex-basis: 1;
+ }
+}
